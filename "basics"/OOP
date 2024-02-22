@@ -1,1 +1,66 @@
-link: https://www.tiktok.com/@c0uqfd072gdi02v1/video/7331176565902003474
+# Using OOP to create a building directory for a school
+
+class Building:
+
+    def __init__(self, block, level, room, pax, ac=False):
+        self.__block = block
+        self.__level = level
+        self.__room = room
+        self.__pax = pax
+        self.__ac = ac
+
+    def display(self):
+        print(f'Block: {self.__block}')
+        print(f'Level: {self.__level}')
+        print(f'Room: {self.__room}')
+        print(f'Pax: {self.__pax}')
+        print(f'AC: {self.__ac}')
+
+    def getBlock(self):
+        return self.__block
+
+    def getLevel(self):
+        return self.__level
+
+    def getRoom(self):
+        return self.__room
+
+    def getPax(self):
+        return self.__pax
+
+    def getAC(self):
+        return self.__ac
+
+    def setPax(self, newPax):
+        self.__pax = newPax
+
+    def setAC(self, newAC):
+        self.__ac = newAC
+
+class BlockA(Building):
+
+    def __init__(self, name, block, level, room, pax, ac=False):
+        super().__init__(block, level, room, pax, ac)
+        self.__name = name
+        self.__gender = "Males"
+        self.__age = "17 to 18"
+
+    def display(self):
+        print(f'Name: {self.__name}')
+        super().display()
+        print(f'Gender allowed: {self.__gender}')
+        print(f'Age range allowed: {self.__age}')
+
+#main
+
+canteen = BlockA("Canteen", "A", "1", "1", 100)
+hall = BlockA("Hall", "A", "2", "1", 700, True)
+
+canteen.display()
+print("")
+hall.display()
+hall.setAC(False)
+print("")
+hall.display()
+print("")
+hall.getPax()
