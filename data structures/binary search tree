@@ -1,1 +1,99 @@
+# Using BST for data input
 
+class BST:
+
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+    def insert(self, value):
+        if value < self.data:
+            if self.left is None:
+                self.left = BST(value)
+            else:
+                self.left.insert(value)
+        else:
+            if self.right is None:
+                self.right = BST(value)
+            else:
+                self.right.insert(value)
+
+    def search(self, target):
+        if target == self.data:
+            return "Found"
+        elif self.left is None and self.right is None:
+            return "Not Found"
+        elif target < self.data:
+            if self.left is None:
+                return "Not Found"
+            else:
+                return self.left.search(target)
+        else:
+            if self.right is None:
+                return "Not Found"
+            else:
+                return self.right.search(target)
+
+    def preorder(self):
+        print(self.data, end=" ")
+        if self.left:
+            self.left.preorder()
+        if self.right:
+            self.right.preorder()
+
+    def inorder(self):
+        if self.left:
+            self.left.inorder()
+        print(self.data, end=" ")
+        if self.right:
+            self.right.inorder()
+
+    def postorder(self):
+        if self.left:
+            self.left.postorder()
+        if self.right:
+            self.right.postorder()
+        print(self.data, end=" ")
+
+    def reverse(self):
+        if self.right:
+            self.right.reverse()
+        print(self.data, end=" ")
+        if self.left:
+            self.left.reverse()
+
+    def minimum(self):
+        if self.left is None:
+            print(self.data)
+        else:
+            self.left.minimum()
+
+    def maximum(self):
+        if self.right is None:
+            print(self.data)
+        else:
+            self.right.maximum()
+
+# Creating a BST instance
+bst = BST(50)
+
+bst.insert(30)
+bst.insert(20)
+bst.insert(40)
+bst.insert(70)
+bst.insert(80)
+
+print(bst.search(40))
+print(bst.search(100))
+
+bst.preorder()
+print("")
+bst.inorder()
+print("")
+bst.postorder()
+print("")
+
+bst.minimum()
+bst.maximum()
+bst.reverse()
