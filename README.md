@@ -1,6 +1,7 @@
 # revision
 
 "basics"
+- CRUD dictionary: https://www.tiktok.com/@c0uqfd072gdi02v1/video/7338838646268628232
 - OOP: https://www.tiktok.com/@c0uqfd072gdi02v1/video/7331176565902003474
 
 "data structures"
