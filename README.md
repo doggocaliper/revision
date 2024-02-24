@@ -1,5 +1,8 @@
 # revision
 
+question bank:
+- https://docs.google.com/document/d/1E3DZjwXwnc8Q67_0tfrzVoMGGY-ql6brdi_-soB2ApY/edit?usp=sharing
+
 "basics"
 - CRUD dictionary: https://www.tiktok.com/@c0uqfd072gdi02v1/video/7338838646268628232
 - OOP: https://www.tiktok.com/@c0uqfd072gdi02v1/video/7331176565902003474
