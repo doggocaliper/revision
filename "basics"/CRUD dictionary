@@ -1,0 +1,27 @@
+# CRUD dictionary used in an Art museum
+# track what paintings are available for loan
+
+artwork = {
+    'mona lisa': True,
+    'da vinci': True,
+    'a stormy night': False,
+    'monet': True
+}
+
+# create (adding new artworks to the loan collection)
+artwork['the last supper'] = True
+
+# read (check the availability of a specific artwork)
+print("mona lisa availability: ", artwork['mona lisa'])
+
+# update (if an artwork has been loaned/returned)
+artwork['da vinci'] = False
+
+# delete (if the artwork has been stolen/ can no longer be loaned)
+del artwork['monet']
+
+print()
+
+for art, availability in artwork.items():
+    print(f"{art}: {availability}")
+    print()
