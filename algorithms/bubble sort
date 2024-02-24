@@ -1,0 +1,17 @@
+# Bubble sort
+
+def bubble_sort(A):
+    n = len(A)
+    for i in range(n):
+        swapped = False
+        for j in range(n-1):
+            if A[j] > A[j+1]:
+                A[j], A[j+1] = A[j+1], A[j]
+                swapped = True
+        if not swapped:
+            break
+        n -= 1
+    return A
+
+data = [9, 7, 8, 1, 2, 3]
+print(bubble_sort(data))
